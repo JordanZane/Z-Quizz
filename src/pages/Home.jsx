@@ -24,7 +24,7 @@ const Home = () => {
             <div className="col-lg-7">
               <div className="categories-container">
                 <h2>Catégories</h2>
-                <p>Sélectionnez parmis de nombreuses catégories votre quiz !</p>
+                <p>Sélectionnez votre quiz parmis de nombreuses catégories !</p>
                 <ul>
                   <li>
                     <Link to="/categories/general-knowledge">
