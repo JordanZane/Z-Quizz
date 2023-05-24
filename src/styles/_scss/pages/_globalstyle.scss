@@ -107,8 +107,8 @@ img {
   @include transition(0.3s);
   display: inline-block;
   &:hover {
-    background-color: $color-white;
-    color: $color-purple;
+    background-color: $color-blue;
+    color: $color-white;
     border-radius: 11px;
   }
 }
