@@ -6,7 +6,9 @@ const Menu = () => {
     return (
         <header>
             <div className="logo-container">
-                <img src={logoImg} alt="ZQuiz" />
+                <a href="/">  
+                    <img src={logoImg} alt="ZQuiz" />
+                </a>
             </div>
             <h1>Zquiz</h1>
             <nav>
@@ -15,8 +17,7 @@ const Menu = () => {
                     <NavLink to="/"><i className="fa-solid fa-house"></i></NavLink>
                     </li>
                     <li>
-                    <NavLink to="/">Catégories</NavLink>
-
+                    <NavLink to="/categories">Catégories</NavLink>
                     </li>
                     
                 </ul>
