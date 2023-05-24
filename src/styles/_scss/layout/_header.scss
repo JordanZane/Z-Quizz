@@ -15,9 +15,9 @@ header {
           a {
             text-decoration: none;
             color: $color-white;
+            font-weight: bold;
             @include transition(0.3s);
             &.active {
-              font-weight: bold;
               position: relative;
               &::after {
                 content: '';
