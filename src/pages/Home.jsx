@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import computerScienceImg from '../assets/images/computer-science.svg';
 
 const Home = () => {
   return (
@@ -62,9 +63,16 @@ const Home = () => {
             </div>
             <div className="col-lg-5">
               <div className="card-container">
-                <h3>Testez vos connaissances</h3>
-                <p>- Computer Science -</p>
-                <Link to="/category/science-computer">Jouez</Link>
+                <div className="img-container">
+                  <img src={computerScienceImg} alt="computer science" />
+                </div>
+                <div className="content">
+                  <h3>Testez vos connaissances</h3>
+                  <p>- Computer Science -</p>
+                  <Link className="btn-style" to="/category/science-computer">
+                    Jouez
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

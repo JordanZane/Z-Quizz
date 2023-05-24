@@ -33,6 +33,7 @@ body {
     font-weight: 700;
     line-height: 43px;
     padding: 32px 0 25px;
+    color: $color-purple;
     @include respond-to('medium') {
       font-size: 25px;
     }
@@ -67,8 +68,8 @@ body {
 
   p {
     font-family: $font1;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     margin: 10px 0;
     a {
       text-decoration: underline;
@@ -80,6 +81,8 @@ body {
 
   ul {
     margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
     li {
       margin: 10px 0;
       list-style-position: inside;
@@ -87,23 +90,25 @@ body {
   }
 }
 
-.seperator-right {
-  position: relative;
-  padding-right: 15px;
-  &:before {
-    background: $color-white;
-    height: 100%;
-    width: 1px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    content: '';
-  }
+.section {
+  margin: 50px 0;
 }
 
-.button_back {
-  margin-top: 40px;
-  text-align: center;
-  a {
+img {
+  max-width: 100%;
+}
+
+.btn-style {
+  padding: 12px 18px;
+  background: $color-purple;
+  text-decoration: none;
+  color: $color-white;
+  font-weight: bold;
+  @include transition(0.3s);
+  display: inline-block;
+  &:hover {
+    background-color: $color-white;
+    color: $color-purple;
+    border-radius: 11px;
   }
 }
