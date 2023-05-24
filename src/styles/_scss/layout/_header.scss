@@ -1,0 +1,49 @@
+header {
+  background-color: $color-purple;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        li {
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            text-decoration: none;
+            color: $color-white;
+            @include transition(0.3s);
+            &.active {
+              font-weight: bold;
+              position: relative;
+              &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                bottom: -10px;
+                width: 0;
+                height: 3px;
+                background-color: $color-white;
+                animation: growX 0.5s linear forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes growX {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}

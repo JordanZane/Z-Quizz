@@ -1,0 +1,12 @@
+$font1: 'Inter';
+$font2: 'Walkester';
+
+@font-face {
+  font-family: 'Walkester', sans-serif;
+  src: url('../../../assets//fonts/walkester/walkester.eot');
+  src: url('../../../assets/fonts/walkester/walkester.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../../assets/fonts/walkester/walkester.woff') format('woff'),
+    url('../../../assets/fonts/walkester/walkester.ttf') format('truetype'),
+    url('../../../assets/fonts/walkester/walkester.svg#Walkester') format('svg');
+}
