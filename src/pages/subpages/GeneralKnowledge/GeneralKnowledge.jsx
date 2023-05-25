@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import DifficulyNav from '../../../components/DifficulyNav';
 
 const GeneralKnowledge = () => {
+  const categoryName = 'general-knowledge';
+
   return (
     <main>
       <section className="section subpage-section">
@@ -10,21 +12,7 @@ const GeneralKnowledge = () => {
             <div className="col-lg-12">
               <h2>Culture générale</h2>
               <ul className="difficulty-container">
-                <li className="easy-difficulty">
-                  <Link to="/categories/general-knowledge/gk-easy">
-                    <i className="fa-solid fa-star"></i>Facile
-                  </Link>
-                </li>
-                <li className="medium-difficulty">
-                  <Link to="/categories/general-knowledge/gk-medium">
-                    <i className="fa-solid fa-star"></i>Intermédiaire
-                  </Link>
-                </li>
-                <li className="hard-difficulty">
-                  <Link to="/categories/general-knowledge/gk-hard">
-                    <i className="fa-solid fa-star"></i>Difficle
-                  </Link>
-                </li>
+                <DifficulyNav categoryName={categoryName} />
               </ul>
             </div>
           </div>

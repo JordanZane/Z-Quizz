@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import QuizCard from '../../../components/QuizCard';
 
-const GkEasy = () => {
+const GkMedium = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy')
+      .get('https://opentdb.com/api.php?amount=10&category=9&difficulty=medium')
       .then((response) => {
         const responseData = response.data;
         const quizContent = responseData.results.map((quiz) => {
@@ -36,4 +36,4 @@ const GkEasy = () => {
   );
 };
 
-export default GkEasy;
+export default GkMedium;
