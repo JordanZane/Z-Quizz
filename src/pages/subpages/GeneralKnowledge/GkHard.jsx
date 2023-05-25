@@ -7,12 +7,12 @@ import 'swiper/swiper-bundle.css';
 
 import QuizCard from '../../../components/QuizCard';
 
-const GkEasy = () => {
+const GkHard = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get('https://opentdb.com/api.php?amount=10&category=9&difficulty=medium')
+      .get('https://opentdb.com/api.php?amount=10&category=9&difficulty=hard')
       .then((response) => {
         const responseData = response.data;
         const quizContent = responseData.results.map((quiz) => {
@@ -42,7 +42,7 @@ const GkEasy = () => {
       <div className="row">
         <div className="col-lg-12">
           <div className="quiz-container">
-            <h2>General knowledge - Medium</h2>
+            <h2>General knowledge - Hard</h2>
 
             <div className="swiper-container">
               <div className="swiper-wrapper">
@@ -59,4 +59,4 @@ const GkEasy = () => {
   );
 };
 
-export default GkEasy;
+export default GkHard;

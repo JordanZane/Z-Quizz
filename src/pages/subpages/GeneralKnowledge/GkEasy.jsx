@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
 import 'swiper/swiper-bundle.css';
 
@@ -42,6 +42,7 @@ const GkEasy = () => {
       <div className="row">
         <div className="col-lg-12">
           <div className="quiz-container">
+            <h2>General knowledge - Easy</h2>
             <div className="swiper-container">
               <div className="swiper-wrapper">
                 {data.map((quiz) => {

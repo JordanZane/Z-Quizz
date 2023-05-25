@@ -9,7 +9,8 @@ const QuizCard = ({ quiz }) => {
       .replace(/&quot;/g, '"')
       .replace(/&rsquo;/g, "'")
       .replace(/&#039;/g, "'")
-      .replace(/&shy;/g, '-');
+      .replace(/&shy;/g, '-')
+      .replace(/&#039;/g, "'");
   };
 
   const handleAnswerClick = (answer) => {
@@ -24,7 +25,11 @@ const QuizCard = ({ quiz }) => {
     <div className="swiper-slide">
       <p>{replaceSpecialCharacters(quiz.question)}</p>
       {shuffledAnswers.map((answer, index) => (
-        <button onClick={() => handleAnswerClick(answer)} key={index}>
+        <button
+          className="btn-style"
+          onClick={() => handleAnswerClick(answer)}
+          key={index}
+        >
           {answer}
         </button>
       ))}

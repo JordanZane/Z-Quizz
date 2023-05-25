@@ -5,6 +5,8 @@ import Categories from './pages/Categories';
 import GeneralKnowledge from './pages/subpages/GeneralKnowledge/GeneralKnowledge';
 import GkEasy from './pages/subpages/GeneralKnowledge/GkEasy';
 import GkMedium from './pages/subpages/GeneralKnowledge/GkMedium';
+import GkHard from './pages/subpages/GeneralKnowledge/GkHard';
+
 import './styles/_scss/styles.scss';
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           path="/categories/general-knowledge-medium"
           element={<GkMedium />}
         />
+        <Route path="/categories/general-knowledge-hard" element={<GkHard />} />
       </Routes>
     </>
   );
