@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+import 'swiper/swiper-bundle.css';
+
 import QuizCard from '../../../components/QuizCard';
 
 const GkEasy = () => {
@@ -21,14 +25,31 @@ const GkEasy = () => {
       });
   }, []);
 
+  useEffect(() => {
+    Swiper.use([Navigation]);
+
+    const swiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+      },
+    });
+  }, []);
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
           <div className="quiz-container">
-            {data.map((quiz) => {
-              return <QuizCard key={quiz.id} quiz={quiz} />;
-            })}
+            <div className="swiper-container">
+              <div className="swiper-wrapper">
+                {data.map((quiz) => {
+                  return <QuizCard key={quiz.id} quiz={quiz} />;
+                })}
+              </div>
+              <div className="swiper-button-next"></div>
+            </div>
           </div>
         </div>
       </div>
