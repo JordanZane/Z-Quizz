@@ -21,7 +21,7 @@ const Home = () => {
       <section className="categories-section section">
         <div className="container">
           <div className="row">
-            <div className="col-lg-7">
+            <div className="col-lg-7 col-md-12">
               <div className="categories-container">
                 <h2>Catégories</h2>
                 <p>Sélectionnez votre quiz parmis de nombreuses catégories !</p>
@@ -61,12 +61,12 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-5">
+            <div className="col-lg-5 col-md-12">
               <h2>Quiz du mois</h2>
 
               <div className="card-container">
                 <div className="img-container">
-                  <img src={computerScienceImg} alt="computer science" />
+                  <img src={computerScienceImg} alt="Computer science" />
                 </div>
                 <div className="content">
                   <h3>Testez vos connaissances</h3>

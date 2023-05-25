@@ -1,17 +1,19 @@
 .quiz-container {
   overflow: hidden;
   text-align: center;
-  .swiper-wrapper {
-    .swiper-slide {
-      p {
-        font-weight: bold;
-        margin-bottom: 30px;
-      }
-      button {
-        margin: 0 15px;
-        color: $color-white;
-        border: unset;
-        font-size: 14px;
+  .quiz-card {
+    display: none;
+    &.active {
+      display: block;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .btn-style {
+      margin: 0 15px;
+      &.selected {
+        background-color: $color-blue;
       }
     }
   }

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const QuizCard = ({ quiz }) => {
+const QuizCard = ({ quiz, isActive, onNextQuestion }) => {
   const allAnswers = [quiz.correct_answer, ...quiz.incorrect_answers];
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+
   const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
 
   const replaceSpecialCharacters = (str) => {
@@ -13,26 +15,40 @@ const QuizCard = ({ quiz }) => {
       .replace(/&#039;/g, "'");
   };
 
-  const handleAnswerClick = (answer) => {
-    if (answer === quiz.correct_answer) {
-      console.log(true);
-    } else {
-      console.log(false);
-    }
+  const handleAnswerSelection = (answer) => {
+    setSelectedAnswer(answer);
+  };
+
+  const handleConfirm = (answer) => {
+    onNextQuestion();
+    setSelectedAnswer(answer);
+    console.log(selectedAnswer);
   };
 
   return (
-    <div className="swiper-slide">
+    <div className={`quiz-card ${isActive ? 'active' : ''}`}>
+      <div className="scores-container">0/10</div>
+
       <p>{replaceSpecialCharacters(quiz.question)}</p>
       {shuffledAnswers.map((answer, index) => (
-        <button
-          className="btn-style"
-          onClick={() => handleAnswerClick(answer)}
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+        <a
+          href="#"
+          className={`btn-style answer-link ${
+            selectedAnswer === answer ? 'selected' : ''
+          }`}
           key={index}
+          onClick={() => handleAnswerSelection(answer)}
         >
           {answer}
-        </button>
+        </a>
       ))}
+      {isActive && selectedAnswer && (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+        <a className="btn-style btn-confirm" href="#" onClick={handleConfirm}>
+          Confirm
+        </a>
+      )}
     </div>
   );
 };

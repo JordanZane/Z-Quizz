@@ -28,6 +28,7 @@ const GkHard = () => {
   useEffect(() => {
     Swiper.use([Navigation]);
 
+    // eslint-disable-next-line no-unused-vars
     const swiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       loop: true,
@@ -43,7 +44,6 @@ const GkHard = () => {
         <div className="col-lg-12">
           <div className="quiz-container">
             <h2>General knowledge - Hard</h2>
-
             <div className="swiper-container">
               <div className="swiper-wrapper">
                 {data.map((quiz) => {

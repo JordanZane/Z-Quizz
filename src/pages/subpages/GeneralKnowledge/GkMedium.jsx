@@ -28,6 +28,7 @@ const GkEasy = () => {
   useEffect(() => {
     Swiper.use([Navigation]);
 
+    // eslint-disable-next-line no-unused-vars
     const swiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       loop: true,
