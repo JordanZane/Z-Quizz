@@ -42,7 +42,7 @@ const GkEasy = () => {
                 compteurQuestion === 11 ? 'hidden' : ''
               }`}
             >
-              {compteurQuestion}/10
+              <p>Question : {compteurQuestion}/10</p>
             </div>
             {data.map((quiz, index) => {
               const isActive = index === activeCardIndex;

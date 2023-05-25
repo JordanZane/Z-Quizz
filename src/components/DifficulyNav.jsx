@@ -6,18 +6,30 @@ const DifficulyNav = ({ categoryName }) => {
   return (
     <>
       <li className="easy-difficulty">
-        <Link to={'/categories/' + categoryNames + '-easy'}>
-          <i className="fa-solid fa-star"></i>Facile
+        <Link
+          className="btn-style"
+          to={'/categories/' + categoryNames + '-easy'}
+        >
+          Facile
+          <i className="fa-solid fa-star"></i>
         </Link>
       </li>
       <li className="medium-difficulty">
-        <Link to={'/categories/' + categoryNames + '-medium'}>
-          <i className="fa-solid fa-star"></i>Intermédiaire
+        <Link
+          className="btn-style"
+          to={'/categories/' + categoryNames + '-medium'}
+        >
+          Intermédiaire
+          <i className="fa-solid fa-star"></i>
         </Link>
       </li>
       <li className="hard-difficulty">
-        <Link to={'/categories/' + categoryNames + '-hard'}>
-          <i className="fa-solid fa-star"></i>Difficile
+        <Link
+          className="btn-style"
+          to={'/categories/' + categoryNames + '-hard'}
+        >
+          Difficile
+          <i className="fa-solid fa-star"></i>
         </Link>
       </li>
     </>

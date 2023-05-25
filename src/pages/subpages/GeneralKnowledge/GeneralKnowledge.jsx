@@ -10,7 +10,9 @@ const GeneralKnowledge = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2>Culture générale</h2>
+              <h2>
+                Culture générale <i className="fa-solid fa-masks-theater"></i>
+              </h2>
               <ul className="difficulty-container">
                 <DifficulyNav categoryName={categoryName} />
               </ul>

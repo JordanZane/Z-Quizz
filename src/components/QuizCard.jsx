@@ -20,6 +20,7 @@ const QuizCard = ({
       .replace(/&#039;/g, "'")
       .replace(/&shy;/g, '-')
       .replace(/&lrm;/g, "'")
+      .replace(/Adi&oacute;/g, 'adió')
       .replace(/&Eacute;/g, 'é')
       .replace(/&amp;/g, '&');
   };

@@ -33,3 +33,39 @@
     }
   }
 }
+
+.subpage-section {
+  h2 {
+    text-align: center;
+  }
+  .difficulty-container {
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 30px;
+      a {
+        background-color: $color-purple-light;
+        color: $color-grey;
+      }
+      i {
+        margin-left: 15px;
+        font-size: 20px;
+      }
+    }
+    li.easy-difficulty {
+      i {
+        color: green;
+      }
+    }
+    li.medium-difficulty {
+      i {
+        color: orange;
+      }
+    }
+    li.hard-difficulty {
+      i {
+        color: red;
+      }
+    }
+  }
+}
