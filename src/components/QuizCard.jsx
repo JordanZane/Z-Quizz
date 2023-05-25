@@ -7,10 +7,11 @@ const QuizCard = ({
   compteurCorrectAnswer,
   setCompteurCorrectAnswer,
 }) => {
-  const allAnswers = [quiz.correct_answer, ...quiz.incorrect_answers];
   const [selectedAnswer, setSelectedAnswer] = useState('');
-
-  const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+  const shuffledAnswers = React.useMemo(() => {
+    const allAnswers = [quiz.correct_answer, ...quiz.incorrect_answers];
+    return allAnswers.sort(() => Math.random() - 0.5);
+  }, [quiz.correct_answer, quiz.incorrect_answers]);
 
   const replaceSpecialCharacters = (str) => {
     return str
@@ -18,7 +19,9 @@ const QuizCard = ({
       .replace(/&rsquo;/g, "'")
       .replace(/&#039;/g, "'")
       .replace(/&shy;/g, '-')
-      .replace(/&#039;/g, "'");
+      .replace(/&lrm;/g, "'")
+      .replace(/&Eacute;/g, 'é')
+      .replace(/&amp;/g, '&');
   };
 
   const handleAnswerSelection = (answer) => {
@@ -48,7 +51,7 @@ const QuizCard = ({
             key={index}
             onClick={() => handleAnswerSelection(answer)}
           >
-            {answer}
+            {replaceSpecialCharacters(answer)}
           </a>
         ))}
         {isActive && selectedAnswer && (
