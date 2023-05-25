@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import Swiper, { Navigation } from 'swiper';
-
-import 'swiper/swiper-bundle.css';
-
 import QuizCard from '../../../components/QuizCard';
 
-const GkHard = () => {
+const GkEasy = () => {
   const [data, setData] = useState([]);
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const [compteurQuestion, setCompteurQuestion] = useState(1);
+  const [compteurCorrectAnswer, setCompteurCorrectAnswer] = useState(0);
 
   useEffect(() => {
     axios
@@ -25,32 +24,45 @@ const GkHard = () => {
       });
   }, []);
 
-  useEffect(() => {
-    Swiper.use([Navigation]);
-
-    // eslint-disable-next-line no-unused-vars
-    const swiper = new Swiper('.swiper-container', {
-      direction: 'horizontal',
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-      },
-    });
-  }, []);
+  const handleNextQuestion = () => {
+    if (compteurQuestion <= 10) {
+      setActiveCardIndex(activeCardIndex + 1);
+      setCompteurQuestion(compteurQuestion + 1);
+    }
+  };
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
           <div className="quiz-container">
-            <h2>General knowledge - Hard</h2>
-            <div className="swiper-container">
-              <div className="swiper-wrapper">
-                {data.map((quiz) => {
-                  return <QuizCard key={quiz.id} quiz={quiz} />;
-                })}
-              </div>
-              <div className="swiper-button-next"></div>
+            <h2>General Knowledge - Hard</h2>
+            <div
+              className={`scores-container ${
+                compteurQuestion === 11 ? 'hidden' : ''
+              }`}
+            >
+              {compteurQuestion}/10
+            </div>
+            {data.map((quiz, index) => {
+              const isActive = index === activeCardIndex;
+              return (
+                <QuizCard
+                  key={quiz.id}
+                  quiz={quiz}
+                  isActive={isActive}
+                  onNextQuestion={handleNextQuestion}
+                  compteurCorrectAnswer={compteurCorrectAnswer}
+                  setCompteurCorrectAnswer={setCompteurCorrectAnswer}
+                />
+              );
+            })}
+            <div
+              className={`quiz-card-score ${
+                compteurQuestion === 11 ? 'active' : ''
+              }`}
+            >
+              <h2>Your score : {compteurCorrectAnswer}/10</h2>
             </div>
           </div>
         </div>
@@ -59,4 +71,4 @@ const GkHard = () => {
   );
 };
 
-export default GkHard;
+export default GkEasy;
