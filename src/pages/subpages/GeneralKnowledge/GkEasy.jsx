@@ -7,7 +7,7 @@ const GkEasy = () => {
   const [data, setData] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [compteurQuestion, setCompteurQuestion] = useState(1);
-  const [compteurCorrectAnswer, setCompteurCorrectAnswer] = useState(1);
+  const [compteurCorrectAnswer, setCompteurCorrectAnswer] = useState(0);
 
   useEffect(() => {
     axios
@@ -25,7 +25,7 @@ const GkEasy = () => {
   }, []);
 
   const handleNextQuestion = () => {
-    if (compteurQuestion < 10) {
+    if (compteurQuestion <= 10) {
       setActiveCardIndex(activeCardIndex + 1);
       setCompteurQuestion(compteurQuestion + 1);
     }
@@ -37,7 +37,13 @@ const GkEasy = () => {
         <div className="col-lg-12">
           <div className="quiz-container">
             <h2>General Knowledge - Easy</h2>
-            <div className="scores-container">{compteurQuestion}/10</div>
+            <div
+              className={`scores-container ${
+                compteurQuestion === 11 ? 'hidden' : ''
+              }`}
+            >
+              {compteurQuestion}/10
+            </div>
             {data.map((quiz, index) => {
               const isActive = index === activeCardIndex;
               return (
@@ -48,13 +54,12 @@ const GkEasy = () => {
                   onNextQuestion={handleNextQuestion}
                   compteurCorrectAnswer={compteurCorrectAnswer}
                   setCompteurCorrectAnswer={setCompteurCorrectAnswer}
-                  className={compteurQuestion === 10 ? 'hidden' : ''}
                 />
               );
             })}
             <div
               className={`quiz-card-score ${
-                compteurQuestion === 10 ? 'active' : ''
+                compteurQuestion === 11 ? 'active' : ''
               }`}
             >
               <h2>Your score : {compteurCorrectAnswer}/10</h2>

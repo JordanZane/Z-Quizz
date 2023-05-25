@@ -17,4 +17,13 @@
       }
     }
   }
+  .quiz-card-score {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .scores-container.hidden {
+    display: none;
+  }
 }
