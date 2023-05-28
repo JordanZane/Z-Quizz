@@ -6,6 +6,8 @@ import GeneralKnowledge from './pages/subpages/GeneralKnowledge/GeneralKnowledge
 import GkEasy from './pages/subpages/GeneralKnowledge/GkEasy';
 import GkMedium from './pages/subpages/GeneralKnowledge/GkMedium';
 import GkHard from './pages/subpages/GeneralKnowledge/GkHard';
+import VideosGames from './pages/subpages/VideosGames/VideosGames';
+import VgEasy from './pages/subpages/VideosGames/VgEasy';
 
 import './styles/_scss/styles.scss';
 
@@ -26,6 +28,8 @@ function App() {
           element={<GkMedium />}
         />
         <Route path="/categories/general-knowledge-hard" element={<GkHard />} />
+        <Route path="/categories/videos-games" element={<VideosGames />} />
+        <Route path="/categories/videos-games-easy" element={<VgEasy />} />
       </Routes>
     </>
   );

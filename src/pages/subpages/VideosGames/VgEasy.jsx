@@ -3,7 +3,7 @@ import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import QuizCard from '../../../components/QuizCard';
 
-const GkEasy = () => {
+const VgEasy = () => {
   const [data, setData] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [compteurQuestion, setCompteurQuestion] = useState(1);
@@ -11,7 +11,7 @@ const GkEasy = () => {
 
   useEffect(() => {
     axios
-      .get('https://opentdb.com/api.php?amount=10&category=9&difficulty=medium')
+      .get('https://opentdb.com/api.php?amount=10&category=15&difficulty=easy')
       .then((response) => {
         const responseData = response.data;
         const quizContent = responseData.results.map((quiz) => {
@@ -36,7 +36,7 @@ const GkEasy = () => {
       <div className="row">
         <div className="col-lg-12">
           <div className="quiz-container">
-            <h2>General Knowledge - Medium</h2>
+            <h2>Videos Games - Easy</h2>
             <div
               className={`scores-container ${
                 compteurQuestion === 11 ? 'hidden' : ''
@@ -71,4 +71,4 @@ const GkEasy = () => {
   );
 };
 
-export default GkEasy;
+export default VgEasy;

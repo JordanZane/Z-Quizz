@@ -34,7 +34,6 @@ const QuizCard = ({
     setSelectedAnswer(answer);
     if (answer === quiz.correct_answer) {
       setCompteurCorrectAnswer(compteurCorrectAnswer + 1);
-      console.log(compteurCorrectAnswer);
     }
   };
 

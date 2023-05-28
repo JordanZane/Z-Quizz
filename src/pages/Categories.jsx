@@ -20,56 +20,51 @@ const Categories = () => {
                   </li>
                   <li>
                     <Link to="/categories/videos-games">
-                      <i className="fa-solid fa-masks-theater"></i> Jeux vidéos
+                      <i className="fa-solid fa-gamepad"></i> Jeux vidéos
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/science-nature">
-                      <i className="fa-solid fa-masks-theater"></i> Science :
+                      <i className="fa-sharp fa-solid fa-leaf"></i> Science :
                       Nature
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/science-computer">
-                      <i className="fa-solid fa-masks-theater"></i> Science :
-                      Ordinateur
+                      <i className="fa-sharp fa-solid fa-computer"></i> Science
+                      : Ordinateur
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/categories/science-gadgets">
-                      <i className="fa-solid fa-masks-theater"></i> Science :
-                      Gadgets
-                    </Link>
-                  </li>
+
                   <li>
                     <Link to="/categories/anim-manga-jap">
-                      <i className="fa-solid fa-masks-theater"></i> Animations
-                      Japonaises & Manga
+                      <i class="fa-solid fa-book"></i> Animations Japonaises &
+                      Manga
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/mythology">
-                      <i className="fa-solid fa-masks-theater"></i> Mythologie
+                      <i class="fa-sharp fa-solid fa-bolt"></i> Mythologie
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/films">
-                      <i className="fa-solid fa-masks-theater"></i> Films
+                      <i className="fa-solid fa-video"></i> Movies
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/sports">
-                      <i className="fa-solid fa-masks-theater"></i> Sports
+                      <i className="fa-solid fa-baseball"></i> Sports
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/geography">
-                      <i className="fa-solid fa-masks-theater"></i> Géographie
+                      <i className="fa-solid fa-earth-americas"></i> Géographie
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/animals">
-                      <i className="fa-solid fa-masks-theater"></i> Animaux
+                      <i className="fa-solid fa-hippo"></i> Animals
                     </Link>
                   </li>
                 </ul>
