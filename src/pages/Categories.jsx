@@ -38,13 +38,13 @@ const Categories = () => {
 
                   <li>
                     <Link to="/categories/anim-manga-jap">
-                      <i class="fa-solid fa-book"></i> Animations Japonaises &
-                      Manga
+                      <i className="fa-solid fa-book"></i> Animations Japonaises
+                      & Manga
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/mythology">
-                      <i class="fa-sharp fa-solid fa-bolt"></i> Mythologie
+                      <i className="fa-sharp fa-solid fa-bolt"></i> Mythologie
                     </Link>
                   </li>
                   <li>

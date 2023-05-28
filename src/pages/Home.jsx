@@ -34,25 +34,25 @@ const Home = () => {
                   </li>
                   <li>
                     <Link to="/categories/videos-games">
-                      <i className="fa-solid fa-masks-theater"></i> Jeux vidéos
+                      <i className="fa-solid fa-gamepad"></i>Jeux vidéos
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/science-nature">
-                      <i className="fa-solid fa-masks-theater"></i> Science :
+                      <i className="fa-sharp fa-solid fa-leaf"></i>Science :
                       Nature
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/science-computer">
-                      <i className="fa-solid fa-masks-theater"></i> Science :
-                      Ordinateur
+                      <i className="fa-sharp fa-solid fa-computer"></i> Science
+                      : Ordinateur
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/anim-manga-jap">
-                      <i className="fa-solid fa-masks-theater"></i> Animations
-                      Japonaises & Manga
+                      <i className="fa-solid fa-book"></i> Animations Japonaises
+                      & Manga
                     </Link>
                   </li>
                 </ul>

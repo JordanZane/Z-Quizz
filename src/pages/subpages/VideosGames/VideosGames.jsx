@@ -11,7 +11,7 @@ const VideosGames = () => {
           <div className="row">
             <div className="col-lg-12">
               <h2>
-                Vidéos Games <i class="fa-solid fa-gamepad"></i>
+                Vidéos Games <i className="fa-solid fa-gamepad"></i>
               </h2>
               <ul className="difficulty-container">
                 <DifficulyNav categoryName={categoryName} />
