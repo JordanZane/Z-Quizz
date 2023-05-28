@@ -34,12 +34,12 @@ const Home = () => {
                   </li>
                   <li>
                     <Link to="/categories/videos-games">
-                      <i className="fa-solid fa-gamepad"></i>Jeux vidéos
+                      <i className="fa-solid fa-gamepad"></i> Jeux vidéos
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/science-nature">
-                      <i className="fa-sharp fa-solid fa-leaf"></i>Science :
+                      <i className="fa-sharp fa-solid fa-leaf"></i> Science :
                       Nature
                     </Link>
                   </li>
