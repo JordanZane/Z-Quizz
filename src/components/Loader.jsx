@@ -21,13 +21,14 @@ const LoaderContainer = styled.div`
   width: 0;
   position: absolute;
   left: 48%;
-  top: 30%;
+  top: 35%;
   transform: translate(-47%, 0);
 `;
 
 const Loader = () => {
   return (
     <div>
+      <h3>Loading...</h3>
       <LoaderContainer />
     </div>
   );
