@@ -61,7 +61,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-5 col-md-12">
+            <div className="col-lg-5 col-md-12 monthly-quiz">
               <h2>Quiz du mois</h2>
 
               <div className="card-container">

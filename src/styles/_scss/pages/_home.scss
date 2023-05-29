@@ -1,9 +1,10 @@
 .header-home-section {
   text-align: center;
-  animation: fadeUp 1s linear forwards;
+  animation: fadeUp 0.8s linear forwards;
 }
 .categories-section {
   .categories-container {
+    animation: showUp 0.8s linear forwards;
     ul {
       display: flex;
       flex-wrap: wrap;
@@ -35,10 +36,15 @@
       }
     }
   }
-
+  .monthly-quiz {
+    h2 {
+      animation: showUp 0.8s linear forwards;
+    }
+  }
   .card-container {
     position: relative;
     text-align: center;
+    animation: showUp 0.8s linear forwards;
     .content {
       position: absolute;
       left: 50%;
