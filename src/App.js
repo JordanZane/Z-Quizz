@@ -24,7 +24,24 @@ import AmMedium from './pages/subpages/AnimManga/AmMedium';
 import AmHard from './pages/subpages/AnimManga/AmHard';
 import Mythology from './pages/subpages/Mythology/Mythology';
 import MythoEasy from './pages/subpages/Mythology/MythoEasy';
-
+import MythoMedium from './pages/subpages/Mythology/MythoMedium';
+import MythoHard from './pages/subpages/Mythology/MythoHard';
+import Film from './pages/subpages/Film/Film';
+import FilmEasy from './pages/subpages/Film/FilmEasy';
+import FilmMedium from './pages/subpages/Film/FilmMedium';
+import FilmHard from './pages/subpages/Film/FilmHard';
+import Sport from './pages/subpages/Sport/Sport';
+import SportEasy from './pages/subpages/Sport/SportEasy';
+import SportMedium from './pages/subpages/Sport/SportMedium';
+import SportHard from './pages/subpages/Sport/SportHard';
+import Geography from './pages/subpages/Geography/Geography';
+import GeoEasy from './pages/subpages/Geography/GeoEasy';
+import GeoMedium from './pages/subpages/Geography/GeoMedium';
+import GeoHard from './pages/subpages/Geography/GeoHard';
+import Animals from './pages/subpages/Animals/Animals';
+import AnimalsEasy from './pages/subpages/Animals/AnimalsEasy';
+import AnimalsMedium from './pages/subpages/Animals/AnimalsMedium';
+import AnimalsHard from './pages/subpages/Animals/AnimalsHard';
 import './styles/_scss/styles.scss';
 
 function App() {
@@ -74,6 +91,26 @@ function App() {
         <Route path="/categories/anim-manga-jap-hard" element={<AmHard />} />
         <Route path="/categories/mythology" element={<Mythology />} />
         <Route path="/categories/mythology-easy" element={<MythoEasy />} />
+        <Route path="/categories/mythology-medium" element={<MythoMedium />} />
+        <Route path="/categories/mythology-hard" element={<MythoHard />} />
+        <Route path="/categories/films" element={<Film />} />
+        <Route path="/categories/film-easy" element={<FilmEasy />} />
+        <Route path="/categories/film-medium" element={<FilmMedium />} />
+        <Route path="/categories/film-hard" element={<FilmHard />} />
+        <Route path="/categories/sports" element={<Sport />} />
+        <Route path="/categories/sports-easy" element={<SportEasy />} />
+        <Route path="/categories/sports-medium" element={<SportMedium />} />
+        <Route path="/categories/sports-hard" element={<SportHard />} />
+        <Route path="/categories/geography" element={<Geography />} />
+        <Route path="/categories/geography-easy" element={<GeoEasy />} />
+        <Route path="/categories/geography-medium" element={<GeoMedium />} />
+        <Route path="/categories/geography-hard" element={<GeoHard />} />
+        <Route path="/categories/animals" element={<Animals />} />
+        <Route path="/categories/animals-easy" element={<AnimalsEasy />} />
+        <Route path="/categories/animals-medium" element={<AnimalsMedium />} />
+        <Route path="/categories/animals-hard" element={<AnimalsHard />} />
+
+        <Route path="/*" element={<Home />} />
       </Routes>
     </>
   );
