@@ -1,15 +1,21 @@
 .header-categories-section {
+  animation: showUp 1s linear forwards;
   text-align: center;
+  h2 {
+    animation: fadeUp 1s linear forwards;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     li {
       background-color: $color-purple-light;
       margin-right: 30px;
       border-radius: 11px;
       @include transition(0.3s);
       margin-bottom: 25px;
+
       &:hover {
         background-color: $color-purple;
         a,
@@ -35,6 +41,8 @@
 }
 
 .subpage-section {
+  animation: fadeUp 1s linear forwards;
+
   h2 {
     text-align: center;
   }
