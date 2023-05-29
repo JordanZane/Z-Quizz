@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import QuizCard from './QuizCard';
+import Loader from './Loader';
 
 const QuizCategory = ({ categoryName, apiUrl, difficulty }) => {
   const [data, setData] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [compteurQuestion, setCompteurQuestion] = useState(1);
   const [compteurCorrectAnswer, setCompteurCorrectAnswer] = useState(0);
+  const [isDataLoading, setIsDataLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -18,6 +20,7 @@ const QuizCategory = ({ categoryName, apiUrl, difficulty }) => {
           return { ...quiz, id: uuidv4() };
         });
         setData(quizContent);
+        setIsDataLoading(false);
       })
       .catch((error) => {
         console.log(error);
@@ -39,33 +42,39 @@ const QuizCategory = ({ categoryName, apiUrl, difficulty }) => {
             <h2>
               {categoryName} - {difficulty}
             </h2>
-            <div
-              className={`scores-container ${
-                compteurQuestion === 11 ? 'hidden' : ''
-              }`}
-            >
-              <p>Question : {compteurQuestion}/10</p>
-            </div>
-            {data.map((quiz, index) => {
-              const isActive = index === activeCardIndex;
-              return (
-                <QuizCard
-                  key={quiz.id}
-                  quiz={quiz}
-                  isActive={isActive}
-                  onNextQuestion={handleNextQuestion}
-                  compteurCorrectAnswer={compteurCorrectAnswer}
-                  setCompteurCorrectAnswer={setCompteurCorrectAnswer}
-                />
-              );
-            })}
-            <div
-              className={`quiz-card-score ${
-                compteurQuestion === 11 ? 'active' : ''
-              }`}
-            >
-              <h2>Your score : {compteurCorrectAnswer}/10</h2>
-            </div>
+            {isDataLoading ? (
+              <Loader />
+            ) : (
+              <>
+                <div
+                  className={`scores-container ${
+                    compteurQuestion === 11 ? 'hidden' : ''
+                  }`}
+                >
+                  <p>Question : {compteurQuestion}/10</p>
+                </div>
+                {data.map((quiz, index) => {
+                  const isActive = index === activeCardIndex;
+                  return (
+                    <QuizCard
+                      key={quiz.id}
+                      quiz={quiz}
+                      isActive={isActive}
+                      onNextQuestion={handleNextQuestion}
+                      compteurCorrectAnswer={compteurCorrectAnswer}
+                      setCompteurCorrectAnswer={setCompteurCorrectAnswer}
+                    />
+                  );
+                })}
+                <div
+                  className={`quiz-card-score ${
+                    compteurQuestion === 11 ? 'active' : ''
+                  }`}
+                >
+                  <h2>Your score : {compteurCorrectAnswer}/10</h2>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
