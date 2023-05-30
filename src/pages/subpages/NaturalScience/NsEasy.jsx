@@ -6,7 +6,7 @@ const NsEasy = () => {
       categoryName="Science & Nature"
       apiUrl="https://opentdb.com/api.php?amount=10&category=17&difficulty=easy"
       difficulty="Easy"
-      quizUrl={'science-nature-easy'}
+      quizUrl={'science-nature'}
     />
   );
 };

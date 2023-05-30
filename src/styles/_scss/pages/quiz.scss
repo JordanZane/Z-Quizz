@@ -52,6 +52,13 @@
     display: none;
     &.active {
       display: block;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-container {
+      a {
+        margin: 0 15px;
+      }
     }
   }
   .scores-container.hidden {

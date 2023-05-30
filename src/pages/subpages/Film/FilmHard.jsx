@@ -6,7 +6,7 @@ const FilmHard = () => {
       categoryName="Film"
       apiUrl="https://opentdb.com/api.php?amount=10&category=11&difficulty=hard"
       difficulty="Hard"
-      quizUrl={'film-hard'}
+      quizUrl={'films'}
     />
   );
 };

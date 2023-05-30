@@ -6,7 +6,7 @@ const GeoEasy = () => {
       categoryName="Geography"
       apiUrl="https://opentdb.com/api.php?amount=10&category=22&difficulty=easy"
       difficulty="Easy"
-      quizUrl={'geography-easy'}
+      quizUrl={'geography'}
     />
   );
 };

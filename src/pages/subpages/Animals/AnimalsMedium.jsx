@@ -6,7 +6,7 @@ const AnimalsMedium = () => {
       categoryName="Animals"
       apiUrl="https://opentdb.com/api.php?amount=10&category=27&difficulty=medium"
       difficulty="Medium"
-      quizUrl={'animals-medium'}
+      quizUrl={'animals'}
     />
   );
 };

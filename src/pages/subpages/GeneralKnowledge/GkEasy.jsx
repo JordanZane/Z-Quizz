@@ -6,7 +6,7 @@ const GkEasy = () => {
       categoryName="General Knowledge"
       apiUrl="https://opentdb.com/api.php?amount=10&category=9&difficulty=easy"
       difficulty="Easy"
-      quizUrl={'general-knowledge-easy'}
+      quizUrl={'general-knowledge'}
     />
   );
 };
