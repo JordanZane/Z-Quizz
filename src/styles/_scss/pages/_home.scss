@@ -5,14 +5,26 @@
 .categories-section {
   .categories-container {
     animation: showUp 0.8s linear forwards;
+    @include respond-to('medium') {
+      text-align: center;
+    }
     ul {
       display: flex;
       flex-wrap: wrap;
+      @include respond-to('medium') {
+        justify-content: center;
+      }
       li {
         background-color: $color-purple-light;
         margin-right: 30px;
         border-radius: 11px;
         @include transition(0.3s);
+        @include respond-to('medium') {
+          margin: 15px;
+        }
+        @include respond-to('small') {
+          margin: 6px;
+        }
         &:hover {
           background-color: $color-purple;
           a,
@@ -37,6 +49,10 @@
     }
   }
   .monthly-quiz {
+    @include respond-to('medium') {
+      text-align: center;
+      margin-top: 50px;
+    }
     h2 {
       animation: showUp 0.8s linear forwards;
     }
@@ -51,8 +67,21 @@
       top: 50%;
       transform: translate(-50%, -50%);
       color: $color-white;
+      h3 {
+        @include respond-to('small') {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+      @include respond-to('small') {
+        top: 0;
+        transform: translate(-50%, 0);
+      }
       .btn-style {
         margin-top: 30px;
+        @include respond-to('small') {
+          margin-top: 0;
+        }
       }
     }
   }

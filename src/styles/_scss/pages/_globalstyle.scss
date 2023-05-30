@@ -19,6 +19,7 @@ body {
     padding: 40px 0;
     letter-spacing: 4px;
     color: $color-white;
+    margin: 0;
     @include respond-to('medium') {
       font-size: 45px;
     }
@@ -36,9 +37,6 @@ body {
     color: $color-purple;
     @include respond-to('medium') {
       font-size: 25px;
-    }
-    @include respond-to('small') {
-      font-size: 20px;
     }
   }
 
