@@ -15,7 +15,9 @@
       border-radius: 11px;
       @include transition(0.3s);
       margin-bottom: 25px;
-
+      @include respond-to('medium') {
+        margin: 15px;
+      }
       &:hover {
         background-color: $color-purple;
         a,
@@ -49,11 +51,23 @@
   .difficulty-container {
     display: flex;
     justify-content: center;
+    @include respond-to('small') {
+      flex-direction: column;
+      align-items: center;
+    }
     li {
       margin: 0 30px;
+      @include respond-to('small') {
+        width: 100%;
+        margin: 15px 0;
+      }
       a {
         background-color: $color-purple-light;
         color: $color-grey;
+        @include respond-to('small') {
+          width: 100%;
+          text-align: center;
+        }
       }
       i {
         margin-left: 15px;
