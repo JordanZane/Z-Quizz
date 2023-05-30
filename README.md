@@ -15,7 +15,7 @@ Quiz Progress Tracking: Users can see their scores for completed quizzes.
 Responsive Design: The web application is fully responsive and optimized for different devices.
 
 Technologies Used :
-Front-end: HTML, CSS, JavaScript / Framework: ReactJS
+Front-end: HTML, CSS(SASS), JavaScript / Framework: ReactJS
 
 API: Open Trivia database - https://opentdb.com/
 
