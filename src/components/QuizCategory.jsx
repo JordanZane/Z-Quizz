@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import QuizCard from './QuizCard';
 import Loader from './Loader';
 
-const QuizCategory = ({ categoryName, apiUrl, difficulty }) => {
+const QuizCategory = ({ categoryName, apiUrl, difficulty, quizUrl }) => {
   const [data, setData] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [compteurQuestion, setCompteurQuestion] = useState(1);
@@ -72,6 +73,14 @@ const QuizCategory = ({ categoryName, apiUrl, difficulty }) => {
                   }`}
                 >
                   <h2>Your score : {compteurCorrectAnswer}/10</h2>
+                  <div className="btn-container">
+                    <Link className="btn-style" to={'/categories/' + quizUrl}>
+                      Retry
+                    </Link>
+                    <Link className="btn-style" to={'/categories'}>
+                      Back to categories
+                    </Link>
+                  </div>
                 </div>
               </>
             )}

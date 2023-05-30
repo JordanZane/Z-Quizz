@@ -6,6 +6,7 @@ const VgMedium = () => {
       categoryName="Videos Games"
       apiUrl="https://opentdb.com/api.php?amount=10&category=15&difficulty=medium"
       difficulty="Medium"
+      quizUrl={'videos-games-medium'}
     />
   );
 };

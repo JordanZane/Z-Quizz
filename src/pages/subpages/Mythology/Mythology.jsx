@@ -2,7 +2,7 @@ import React from 'react';
 import DifficulyNav from '../../../components/DifficulyNav';
 
 const Mythology = () => {
-  const categoryName = 'Mythology';
+  const categoryName = 'mythology';
 
   return (
     <main>

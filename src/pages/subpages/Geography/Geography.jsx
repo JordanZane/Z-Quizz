@@ -2,7 +2,7 @@ import React from 'react';
 import DifficulyNav from '../../../components/DifficulyNav';
 
 const Geography = () => {
-  const categoryName = 'Geography';
+  const categoryName = 'geography';
 
   return (
     <main>

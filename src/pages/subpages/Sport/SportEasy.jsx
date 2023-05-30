@@ -6,6 +6,7 @@ const SportEasy = () => {
       categoryName="Sport"
       apiUrl="https://opentdb.com/api.php?amount=10&category=21&difficulty=easy"
       difficulty="Easy"
+      quizUrl={'sports-easy'}
     />
   );
 };
