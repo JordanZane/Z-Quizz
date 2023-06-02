@@ -14,14 +14,14 @@ const Menu = () => {
                   <img src={logoImg} alt="ZQuiz" />
                 </Link>
               </div>
-              <h1>ZQuiz</h1>
+              <h1>Z Quiz</h1>
               <nav>
                 <ul>
                   <li>
-                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/">Home</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/categories">Catégories</NavLink>
+                    <NavLink to="/categories">Categories</NavLink>
                   </li>
                 </ul>
               </nav>

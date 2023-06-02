@@ -10,7 +10,7 @@ const DifficulyNav = ({ categoryName }) => {
           className="btn-style"
           to={'/categories/' + categoryNames + '-easy'}
         >
-          Facile
+          Easy
           <i className="fa-solid fa-star"></i>
         </Link>
       </li>
@@ -19,7 +19,7 @@ const DifficulyNav = ({ categoryName }) => {
           className="btn-style"
           to={'/categories/' + categoryNames + '-medium'}
         >
-          Intermédiaire
+          Medium
           <i className="fa-solid fa-star"></i>
         </Link>
       </li>
@@ -28,7 +28,7 @@ const DifficulyNav = ({ categoryName }) => {
           className="btn-style"
           to={'/categories/' + categoryNames + '-hard'}
         >
-          Difficile
+          Hard
           <i className="fa-solid fa-star"></i>
         </Link>
       </li>

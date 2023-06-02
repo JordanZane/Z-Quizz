@@ -8,19 +8,19 @@ const Categories = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2>Catégories</h2>
+              <h2>Categories</h2>
               <div className="categories-container">
-                <p>Sélectionnez votre quiz parmis de nombreuses catégories !</p>
+                <p>Select your categories !</p>
                 <ul>
                   <li>
                     <Link to="/categories/general-knowledge">
-                      <i className="fa-solid fa-masks-theater"></i> Culture
-                      générale
+                      <i className="fa-solid fa-masks-theater"></i> General
+                      Knowledge
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/videos-games">
-                      <i className="fa-solid fa-gamepad"></i> Jeux vidéos
+                      <i className="fa-solid fa-gamepad"></i> Videos Games
                     </Link>
                   </li>
                   <li>
@@ -32,19 +32,19 @@ const Categories = () => {
                   <li>
                     <Link to="/categories/science-computer">
                       <i className="fa-sharp fa-solid fa-computer"></i> Science
-                      : Ordinateur
+                      : Computer
                     </Link>
                   </li>
 
                   <li>
                     <Link to="/categories/anim-manga-jap">
-                      <i className="fa-solid fa-book"></i> Animations Japonaises
+                      <i className="fa-solid fa-book"></i> Japaneses Animations
                       & Manga
                     </Link>
                   </li>
                   <li>
                     <Link to="/categories/mythology">
-                      <i className="fa-sharp fa-solid fa-bolt"></i> Mythologie
+                      <i className="fa-sharp fa-solid fa-bolt"></i> Mythology
                     </Link>
                   </li>
                   <li>
@@ -59,7 +59,7 @@ const Categories = () => {
                   </li>
                   <li>
                     <Link to="/categories/geography">
-                      <i className="fa-solid fa-earth-americas"></i> Géographie
+                      <i className="fa-solid fa-earth-americas"></i> Géography
                     </Link>
                   </li>
                   <li>
