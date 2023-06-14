@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const Categories = () => {
   return (
@@ -73,6 +74,7 @@ const Categories = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 };

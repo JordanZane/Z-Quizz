@@ -42,6 +42,7 @@ import Animals from './pages/subpages/Animals/Animals';
 import AnimalsEasy from './pages/subpages/Animals/AnimalsEasy';
 import AnimalsMedium from './pages/subpages/Animals/AnimalsMedium';
 import AnimalsHard from './pages/subpages/Animals/AnimalsHard';
+import Legal from './pages/Legal';
 import './styles/_scss/styles.scss';
 
 function App() {
@@ -109,6 +110,7 @@ function App() {
         <Route path="/categories/animals-easy" element={<AnimalsEasy />} />
         <Route path="/categories/animals-medium" element={<AnimalsMedium />} />
         <Route path="/categories/animals-hard" element={<AnimalsHard />} />
+        <Route path="/legal" element={<Legal />} />
 
         <Route path="/*" element={<Home />} />
       </Routes>

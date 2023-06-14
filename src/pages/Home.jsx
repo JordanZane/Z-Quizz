@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import computerScienceImg from '../assets/images/computer-science.svg';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -80,6 +81,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 };
